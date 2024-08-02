@@ -13,6 +13,8 @@ services:
       - ipfs-net
     environment:
       IPFS_CONFIG: '{"Routing": {"Type": "dht"}}'
+      IPFS_API_ADDR: /ip4/0.0.0.0/tcp/5001
+      IPFS_GATEWAY_ADDR: /ip4/0.0.0.0/tcp/8080
 
   ipfs-cluster:
     image: ipfs/ipfs-cluster:latest
