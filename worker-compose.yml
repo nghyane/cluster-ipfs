@@ -7,7 +7,10 @@ services:
     volumes:
       - ./data/ipfs/data:/data/ipfs
       - ./data/ipfs/staging:/export
-
+    ports:
+      - "4001:4001"
+      - "8080:8080"
+      - "5001:5001"
   cluster:
     container_name: cluster
     image: ipfs/ipfs-cluster:latest
